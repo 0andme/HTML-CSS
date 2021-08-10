@@ -1,0 +1,9 @@
+[data-fruits-name] {
+  background-color: blue
+}
+[type] {
+  background-color: orange
+}
+[type="text"] {
+  background-color: red
+}
