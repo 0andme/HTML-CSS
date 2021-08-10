@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <!-- 인라인 요소 a  -->
+  <a href="https://naver.com">네이버 링크</a>
+  <!-- ! 인라인 요소 span  -->
+  <!-- 특별한 의미가 없는 구분을 위한 요소 -->
+  <span>동해물과 백두산이</span>
+  <!--! 인라인 요소 br  -->
+  <!-- 줄바꿈 요소 -->
+  <br>마르고 닳도록
+  <!-- ! 인라인 + 블록요소 input-->
+  <!-- 사용자에게 데이터를 입력받는 요소 -->
+  <!-- * value : 입력창의 값을 넣어둘 수 있음 -->
+  <input type="text" value="입력">
+  <!-- * placeholder : 사용자가 입력할 값의 힌트 -->
+  <input type="text" placeholder="입력해주시오">
+  <!-- * disabled : 입력요소 비활성화: 창이 보이지만 입력은 불가-->
+  <input type="text" disabled>
+  <!-- ! 인라인 요소 label: 라벨 가능 요소의 제목-->
+  <!-- ! checkbox -->
+  <!-- 체크박스라는 이름만 클릭해도 체크가 됨 체크박스랑 글이랑 묶었으니까 -->
+  <label >
+    <input type="checkbox">체크박스
+  </label>
+  <!-- * checked 미리 체크된 박스 -->
+  <label >
+    <input type="checkbox" checked>체크된 박스
+  </label>
+  <!-- ! 그룹 중 하나만 고르는 요소 radio -->
+  <!-- 그룹은 name으로 지정 -->
+  <label >
+    <input type="radio" name="과자">빼빼롱
+  </label>
+  <label >
+    <input type="radio" name="과자">감자깡패
+  </label>
+  <!-- ! 테이블 요소 : table -->
+  <!-- tr: table row 행을 지정하는 요소 -->
+  <!-- td : table data 열을 지정하는요소 -->
+  <tr>
+      <table>
+      <td>A</td><td>B</td>
+    </tr>
+  </table>
+</body>
+</html>

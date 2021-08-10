@@ -1,0 +1,23 @@
+/* 가상요소 선택자 before */
+/* 선택자 요소의 내부 앞에 내용을 삽입 */
+/* 가상의 인라인 요소가 들어감 */
+.box::before{
+  content: "before";
+}
+
+/* after */
+.box::after{
+  content: "after";
+  /* 인라인 요소니까 wh적용안안됨 */
+  /* display : block으로 블록요소처럼 보이게 함 */
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+/* 무조건 content 속성과 그 값을 넣자 */
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: orange
+}
