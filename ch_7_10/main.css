@@ -1,0 +1,24 @@
+div {
+  font-size: 70px;
+  color: red !important;
+}
+
+#c_y {
+  color: yellow;
+}
+
+.c_g {
+  color: green;
+}
+
+div {
+  color: blue;
+}
+
+* {
+  color: darkblue;
+}
+
+body {
+  color: violet;
+}
