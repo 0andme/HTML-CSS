@@ -1,0 +1,20 @@
+@import "../reset.css";
+
+
+.parent {
+  width: 200px;
+  height: 150px;
+  background-color: blue;
+  margin: 20px;
+  padding: 20px;
+  overflow: visible;
+  /* overflow: hidden; */
+  overflow:scroll;
+ 
+}
+
+.child {
+  width: 300px;
+  height: 100px;
+  background-color: orange;
+}
