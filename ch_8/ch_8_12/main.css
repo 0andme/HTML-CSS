@@ -1,22 +1,18 @@
 @import "../reset.css";
 
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-style : italic;
+  /* 바탕체 serif */
+  font-family: serif;
 
-.parent {
-  width: 200px;
-  height: 150px;
-  background-color: blue;
-  margin: 20px;
-  padding: 20px;
-  overflow: visible;
- 
-
- 
 }
 
-.child {
-  width: 300px;
-  height: 100px;
-  background-color: orange;
-  opacity: 0.4;
-  /* 0.4가 아닌 .4로도 작성할 수 있음 */
+p {
+  width: 350px;
+  padding: 10px;
+  border : 1px solid black;
+  box-sizing: border-box;
+  line-height: 1.4;
 }
