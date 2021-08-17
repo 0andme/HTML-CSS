@@ -1,0 +1,15 @@
+@import "../reset.css";
+
+
+body {
+  margin: 20px;
+}
+
+span {
+  width: 120px;
+  height: 30px;
+  background-color: royalblue;
+  color: white;
+  /* !! */
+  display: block;
+}

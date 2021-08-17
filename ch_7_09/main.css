@@ -1,0 +1,25 @@
+/* animal의 하위 모든 요소 전부 바뀜 */
+.animal {
+  color: red;
+}
+
+/* 문자 글자 관련있는 속성이 상속됨*/
+/*모든 문자글자속성이 상속되는 것은 아님*/
+
+/* 강제 상속 */
+/* 원래 상속이 안되는 속성을 상속시킴 */
+.parent {
+  width: 300px;
+  height: 400px;
+  background-color: blue;
+}
+
+.child {
+  width: 100px;
+  /* 부모와 높이를 동일하게함 */
+  height: inherit;
+  background-color: inherit;
+  position: fixed;
+  top: 200px;
+  right: 100px;
+}

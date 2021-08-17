@@ -1,0 +1,26 @@
+@import "../reset.css";
+
+a {
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-color: orange;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 100px;
+}
+
+p {
+  font-size: 24px;
+}
+
+p.plus {
+
+  text-indent: 50px;
+}
+
+p.mius {
+  text-indent: -10px;
+}

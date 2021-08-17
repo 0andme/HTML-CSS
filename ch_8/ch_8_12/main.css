@@ -1,0 +1,18 @@
+@import "../reset.css";
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-style : italic;
+  /* 바탕체 serif */
+  font-family: serif;
+
+}
+
+p {
+  width: 350px;
+  padding: 10px;
+  border : 1px solid black;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
