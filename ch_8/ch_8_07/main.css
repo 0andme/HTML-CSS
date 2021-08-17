@@ -1,16 +1,11 @@
 @import "../reset.css";
 
 
-.container .item{
+.container {
   width: 100px;
   height: 100px;
   background-color: orange;
-  
-  
+  margin: 20px;
+  border-radius:10px 12px 0 0;
   
 }
-.container .item:first-child{
-  border: 10px dashed red;
-
-}
-
