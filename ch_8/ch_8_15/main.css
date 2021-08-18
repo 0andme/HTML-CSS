@@ -1,0 +1,54 @@
+@import "../reset.css";
+
+.wrap{
+  width: 400px;
+  height: 300px;
+  background-color: tomato;
+  position: relative;
+}
+.container {
+  width: 300px;
+  background-color: royalblue;
+  
+  /* 2번의 부모요소에  static을 넣으면
+   * 2번의 위치상 부모요소가 아니게됨
+   * 부모의 부모나 뷰포트를 부모요소로 할 수 있음
+   * 부모의 부모가 기준에 부합하지 않으면 2번은 뷰포트를 기준으로 함  
+   * position: static;
+   */
+  
+}
+
+.container .item {
+  border: 4px dashed red;
+  background-color: orange;
+
+}
+
+.container .item:nth-child(1) {
+  width: 100px;
+  height: 100px;
+}
+
+.container .item:nth-child(2) {
+  width: 140px;
+  height: 70px;
+  /* 본인의 처음 자리기준으로 이동함
+  본인의 자리가 비어있게 됨
+  position: relative;
+  top: 30px;
+  left: 130px; */
+  /* 2번만 absolute지정하면 3번이 1번과 붙게됨
+  2번은 더이상 1,2,3과 동등한 입장이 아님
+  1번이랑만 상호작용하는 것 */
+  position: absolute;
+  /* 2번에만 앱솔루트 쓰면 뷰포트가 부모요소됨 */
+ bottom: 60px;
+ right: 60px;
+
+}
+
+.container .item:nth-child(3) {
+  width: 70px;
+  height: 120px;
+}
