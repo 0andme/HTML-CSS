@@ -325,4 +325,5 @@ z-index
 
   + auto : (기본 값)요소의 content너비
   + 단위 : px, em, rem 등 단위로 지정
+  
 + align-self
