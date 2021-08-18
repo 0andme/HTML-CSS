@@ -17,6 +17,7 @@
 .container .item:nth-child(1) {
   position: relative;
 }
+
 /* 2번 요소와 3번 요소 비교
    1 조건. 2번 요소에 position이 있으므로
    
@@ -35,4 +36,13 @@
   left: 50px;
 }
 
-.container .item:nth-child(3) {}
+.container .item:nth-child(3) {
+  
+}
+span {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 30px;
+  position: absolute;
+}
