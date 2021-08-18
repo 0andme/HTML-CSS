@@ -1,0 +1,48 @@
+@import "../reset.css";
+
+.container {
+  width: 300px;
+  background-color: royalblue;
+  position: relative;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+
+  border: 4px dashed red;
+}
+
+.container .item:nth-child(1) {
+  position: relative;
+}
+
+/* 2번 요소와 3번 요소 비교
+   1 조건. 2번 요소에 position이 있으므로
+   
+   3번 위에 2번이 쌓임   
+*/
+/* 1번 요소와 2번 요소 비교
+   1 조건. 두 요소다 position있고
+   2 조건. z-index없음  
+   3 조건. 2번 요소가 1번 요소의 다음요소
+   따라서 1번 위에 2번 쌓임
+
+*/
+.container .item:nth-child(2) {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+.container .item:nth-child(3) {
+  
+}
+span {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  font-size: 30px;
+  position: absolute;
+}
