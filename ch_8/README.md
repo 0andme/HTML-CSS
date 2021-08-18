@@ -194,3 +194,135 @@ box-sizing:content-box;
 + background-attachment 요소의 배경 이미지 스크롤 특성
   + (기본 값)scroll 이미지가 요소를 따라 같이 스크롤
   + fixed 이미지가 뷰포트에 고정. 스크롤 없음
+
+## 8_15
+### 배치
+
+#### 속성
+position
+: 요소의 위치 지정 기준
+#### 값
++ static : 기본 값
++ relative : 요소 자신을 기준
++ absolute : **위치상** 부모 요소를 기준
++ fixed : 뷰포트 기준
++ sticky : 스크롤 영역 기준
+
+% relative를 자신을 기준으로 해서 위치를 지정하지 않음
+% 본인 자리였던 위치가 텅 빈 채로 남아있게 되는데 이는 오류나 마찬가지임
+
+## 8_16
+### 요소 쌓임 순서 (stack order)
+어떤 요소가 사용자와 더 가깝게 있는지(위에 쌓이는지) 결정. 사용자가 봤을때 어떤 요소가 가장 앞에 있는지
+
+1. 요소에 position 값이 있는 경우 위에 쌓임(기본값 static이 있으면 제외)
+2. 1번 조건이 같으면, z-index 속성의 숫자 값이 높을 수록 위에 쌓임
+3. 1,2번 조건까지 같은 경우, HTML의 다음 구조일 수록 위에 쌓임
+
+## 8_17
+#### 속성
+z-index
+: 요소의 쌓임 정도를 지정
+#### 값
++ auto : 기본 값 = 0 : 부모 요소와 동일한 쌓임 정도
++ 숫자 : 숫자가 높을 수록 위에 쌓임 (매우 큰 숫자 입력 지양)
+
+% position 속성의 값으로 absolute, fixed가 지정된 요소는 display 속성이 block으로 변경된다.
+
+## 8_18
+#### 속성
+플렉스(정렬) flex
+: 1차원 레이아웃을 설정
+: x축, y축 정렬
+
++ display:flex;를 부여한 요소
+: flex container
++ display:flex;를 부여한 요소의 자식 요소
+: flex items
+
+#### flex container에 부여 가능한 속성
+
++ display
+컨테이너의 화면 출력 특성  
+  값
+  + flex : 블록요소와 같이 컨테이너 정의
+  + inline-flex  : 인라인 요소와 같이 컨테이너 정의
+
+
++ flex-direction
+  주 축을 설정 (수평정렬인지,수직정렬인지)
+  주축을 바꾸면 다른 속성 값들도 전부 뒤집히기 때문에 잘 안 씀
+  
+  값
+  + row : (기본 값) 행 축 (좌->우)
+  + row-reverse 행 축 (우->좌)
+  + column 열 축 (위->아래)
+  + column-reverse 열 축 ( 아래->위)
+
+
++ flex-wrap
+  줄 바꿈 처리 여부/ 줄 바꿈 처리가 없으면 요소들이 꾸역꾸역 한 줄에 다 들어가려고 함 / 줄바꿈 처리가 있으면 다음 줄에 요소들이 들어감
+  값
+  + nowrap : (기본 값) 묶음 없음
+  + wrap : 여러 줄 묶음
+
+
++ flex-flow
++ justify-content
+  flex-direction로 설정한 주축의 정렬 방법(주축을 바꾸지 않고 주로 수평 정렬 할 때 사용됨)
+  값
+  + flex-start : (기본 값)flex items을 시작점으로 정렬(왼쪽정렬)
+  + flex-end : flex items을 끝점으로 정렬 (오른쪽 정렬)
+  + center : flex items을 가운데 정렬
+
++ align-content
+  교차 축의 **여러 줄** 정렬 방법 (주로 수직 정렬 할 때 사용) / 여러 줄이기 때문에 flex-wrap:wrap이여야 함 / 두 줄 이상일 때만 적용됌-그래서 잘 안 씀
+  값
+  + stretch (기본값) : flex items을 시작점으로 정렬
+  + flex-start : (기본 값)flex items을 시작점으로 정렬
+  + flex-end : flex items을 끝점으로 정렬
+  + center : flex items을 가운데 정렬
+
+
++ align-items
+교차 축의 **한 줄** 정렬 방법
+  값
+  + stretch (기본값) : flex items을 교차축으로 늘림
+  + flex-start : (기본 값)flex items을 시작점으로 정렬
+  + flex-end : flex items을 끝점으로 정렬
+  + center : flex items을 가운데 정렬
+  
+#### flex items에 부여 가능한 속성
+
++ order
+  flex 아이템의 순서
+  값
+  + 0 : ( 기본값) 순서 없음
+  + 숫자 : 숫자가 작을 수록 먼저 
+  
++ flex
+
+
++ flex-grow
+  flex items의 증가 비율
+  값
+  + 0 :(기본 값) 증가 비율 없음
+  + 숫자 : 증가 비율
+
+
++ flex-shrink
+  flex 아이템의 감소 비율
+  값
+  + 1 :(기본 값) 증가 비율 없음
+  + 숫자 : 감소 비율
+
+% 개발자 도구를 실제로 보면 요소가 1:1:2의 사이즈를 갖지 않음. 이는 요소의 내용부분의 크기가 제작각이기 때문.
+이를 해결하고자 하면 요소의 내용의 너비를 0으로 해주면 됨(flex-basis로 해결)
+
++ flex-basis
+  flex items의 공간 배분 전 기본 너비
+  값
+
+  + auto : (기본 값)요소의 content너비
+  + 단위 : px, em, rem 등 단위로 지정
++ align-self
