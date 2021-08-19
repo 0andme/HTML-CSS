@@ -1,0 +1,33 @@
+@import "../reset.css";
+
+body {
+  padding: 100px;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  background-color: royalblue;
+  perspective: 250px;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  font-weight: 700;
+  background-color: orange;
+  /* transition: 2s; */
+
+  /* transform: translate(40px,40px) ; */
+  /* transform : scale(1.5) rotate(45deg); */
+  /* transform: perspective(100px) rotateX(180deg); */
+  /* transform: skew(45deg,45); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transform: rotateY(45deg);
+  backface-visibility: visible;
+ 
+}
