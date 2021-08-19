@@ -1,0 +1,21 @@
+@import "../reset.css";
+
+div {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  /* transition: all 1s; */
+  transition:
+    width 1s 1s,
+    background-color 0s 2s;
+}
+
+div:hover {
+  width: 300px;
+  background-color: royalblue;
+}
+
+div:active {
+  width: 500px;
+  background-color: red;
+}
