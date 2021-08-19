@@ -327,3 +327,69 @@ z-index
   + 단위 : px, em, rem 등 단위로 지정
   
 + align-self
+
+## 8_21
+#### 전환
+
+#### transition
+요소의 전환 효과를 지정하는 단축 속성
+
+transition: 속성명 지속시간 타이밍함수 대기시간
+단축 형으로 작성할 때는 지속 시간을 필수로 지정해야함
+
+개별속성
++ transition-property
+  속성명
+  + all (기본값) 모든 속성에 적용
+  + 속성이름 : 전환효과를 사용할 속성 이름 명시
++ transition-duration
+  지속 시간 / 요소가 완전히 변하는데 걸리는 총 시간
++ transition-timing-function
+  타이밍함수 / 전환 효과의 타이밍 함수를 지정
+  + ease 느리게 빠르게 느리게
+  + linear 일정하게
+  + ease-in 느리게 빠르게
+  + ease-out 빠르게 느리게
+  + ease-in-out 느리게 빠르게 + 빠르게 느리게
+  참고사이트 
+    + easing함수 치트 https://easings.net/en
+    + mdn https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function
+    + tweenmax easing https://greensock.com/docs/v2/Easing
++ transition-delay
+  대기시간 / 전환 효과가 몇 초 뒤에 시작할지 대기 시간을 지정
+}
+
+## 8_22
+#### 변환
+#### transform : 변환함수 1 변환함수2 변환함수3...;
+
+#### transform: 원근법 이동 크기 회전 기울임;  
+변환함수
+
++ 2D변환함수
+  + traslate(x,y) 이동(x축, y축) 
+  + traslateX(x) 이동(x축)
+  + traslateY(y) 이동(y축)
+  + scale(x,y) 크기(x축, y축) 
+  + rotate(degree) 회전(각도)
+  + skewX(x)기울임(x)
+  + skewY(y)기울임 (y)
++ 3D변환함수
+  + rotateX(x) 회전 (x축)
+  + rotateY(y) 회전 (y축)
+  + perspective(n) 원근법 (거리)
+    관찰대상자체에 적용됨
+    기준점 설정시 transform-origin
+    다른 함수들과는 다르게 맨 앞에 있어야 함
+
+속성
++ perspective
+  하위요소를 관찰하는 원근 거리를 지정
+  관찰 대상의 부모에 적용됨
+  기준점 설정 perspective-origin
+
++ backface-visibility
+  3D변환으로 회전된 요소의 뒷면 숨김 여부
+  값
+  + visible 보임
+  + hidden  숨김
